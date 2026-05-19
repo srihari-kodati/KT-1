@@ -4,12 +4,12 @@ on: push
 
 jobs:
   Test_Job:
-   runs-on: ubuntu-latest
+   runs-on: self-hosted
    steps:
 
    - name: Checkout Repo
      uses: actions/checkout@v6
-     
+
    - name: Welcome Message
      run: echo "This is my first GitHub Actions Workflow"
 
