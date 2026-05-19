@@ -7,6 +7,9 @@ jobs:
    runs-on: ubuntu-latest
    steps:
 
+   - name: Checkout Repo
+     uses: actions/checkout@v6
+     
    - name: Welcome Message
      run: echo "This is my first GitHub Actions Workflow"
 
