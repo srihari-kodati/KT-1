@@ -1,21 +1,28 @@
 name: First Workflow
 
-on: push
+on:
+  # push:
+  #   branches:
+  #     - main
+
+  pull_request:
+    branches:
+      - main
 
 jobs:
   Test_Job:
    runs-on: ubuntu-latest
-  #  timeout-minutes: 1
+
    steps:
 
    - name: Checkout Repo
      uses: actions/checkout@v6
 
    - name: Welcome Message
-     timeout-minutes: 1
+
      run: |
       echo "This is my first GitHub Actions Workflow"
-      sleep 65s
+      echo "Added Pull Request"
 
    - name: List Files
      run: ls -ltra
