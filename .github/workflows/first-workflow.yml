@@ -5,13 +5,17 @@ on: push
 jobs:
   Test_Job:
    runs-on: self-hosted
+  #  timeout-minutes: 1
    steps:
 
    - name: Checkout Repo
      uses: actions/checkout@v6
 
    - name: Welcome Message
-     run: echo "This is my first GitHub Actions Workflow"
+     timeout-minutes: 1
+     run: |
+      echo "This is my first GitHub Actions Workflow"
+      sleep 65s
 
    - name: List Files
      run: ls -ltra
