@@ -5,6 +5,9 @@ on:
 
 jobs: 
     build_job_1:
+        concurrency:
+            group: test_sample
+            cancel-in-progress: false
         runs-on: ubuntu-latest
         steps:          
         - name: Install Cowsay Program
@@ -17,6 +20,9 @@ jobs:
           with:
            name: dragon-text-file
            path: dragon.txt
+
+        - name: sleep 60 seconds
+          run: sleep 60s
         
 
     test_job_2:
