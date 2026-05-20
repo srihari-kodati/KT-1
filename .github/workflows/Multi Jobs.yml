@@ -20,7 +20,6 @@ jobs:
           with:
            name: dragon-text-file
            path: dragon.txt
-
         - name: sleep 60 seconds
           run: sleep 60s
         
